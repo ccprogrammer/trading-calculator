@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Risk Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trading Risk Calculator</h1>
+            <p>Calculate your position size and potential profit with proper risk management</p>
+        </header>
+
+        <div class="calculator">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="capital">Capital ($)</label>
+                    <input type="number" id="capital" placeholder="Enter your trading capital" step="0.01" min="0">
+                </div>
+
+                <div class="input-group">
+                    <label for="risk">Risk Percentage (%)</label>
+                    <input type="number" id="risk" placeholder="e.g., 0.5, 1, 2, 3" step="0.1" min="0" max="100">
+                </div>
+
+                <div class="input-group">
+                    <label for="entryPrice">Entry Price ($)</label>
+                    <input type="number" id="entryPrice" placeholder="Current price to enter" step="0.00001" min="0">
+                </div>
+
+                <div class="input-group">
+                    <label for="stopLoss">Stop Loss Price ($)</label>
+                    <input type="number" id="stopLoss" placeholder="Price to exit if trade goes wrong" step="0.00001" min="0">
+                </div>
+
+                <div class="input-group">
+                    <label for="targetPrice">Target Price ($)</label>
+                    <input type="number" id="targetPrice" placeholder="Price to take profit" step="0.00001" min="0">
+                </div>
+
+                <button id="calculateBtn" onclick="calculateRisk()">Calculate Position Size</button>
+            </div>
+
+            <div class="results-section" id="results" style="display: none;">
+                <h3>Risk Management Results</h3>
+                
+                <div class="result-card">
+                    <div class="result-item">
+                        <span class="label">Risk Amount:</span>
+                        <span class="value" id="riskAmount">$0.00</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="label">Stop Loss %:</span>
+                        <span class="value" id="stopLossPercent">0%</span>
+                    </div>
+                    
+                    <div class="result-item highlight">
+                        <span class="label">Position Size:</span>
+                        <span class="value" id="positionSize">$0.00</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="label">Quantity:</span>
+                        <span class="value" id="quantity">0</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-item">
+                        <span class="label">Potential Profit:</span>
+                        <span class="value profit" id="potentialProfit">$0.00</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="label">Profit %:</span>
+                        <span class="value profit" id="profitPercent">0%</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="label">Risk/Reward Ratio:</span>
+                        <span class="value" id="riskRewardRatio">0:1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Disclaimer:</strong> This tool is for educational purposes only. Trading involves risk of loss. Always do your own research.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

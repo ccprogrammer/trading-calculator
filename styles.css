@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0d1117;
+    min-height: 100vh;
+    color: #e6edf3;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e6edf3;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    color: #8b949e;
+}
+
+.calculator {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+}
+
+.input-section {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #f0f6fc;
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #0d1117;
+    color: #e6edf3;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #1f6feb;
+    background: #0d1117;
+    box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.1);
+}
+
+.input-group input:hover {
+    border-color: #1f6feb;
+}
+
+.input-group input::placeholder {
+    color: #8b949e;
+}
+
+#calculateBtn {
+    width: 100%;
+    padding: 18px;
+    background: #238636;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#calculateBtn:hover {
+    background: #2ea043;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(35, 134, 54, 0.3);
+}
+
+#calculateBtn:active {
+    transform: translateY(0);
+}
+
+.results-section {
+    margin-top: 30px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.results-section h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #f0f6fc;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.result-card {
+    background: #21262d;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #30363d;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #30363d;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item.highlight {
+    background: #1f6feb;
+    color: white;
+    margin: 0 -25px;
+    padding: 20px 25px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+}
+
+.result-item .label {
+    font-weight: 600;
+    color: #8b949e;
+}
+
+.result-item.highlight .label {
+    color: white;
+}
+
+.result-item .value {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #e6edf3;
+}
+
+.result-item.highlight .value {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.result-item .value.profit {
+    color: #3fb950;
+}
+
+.result-item.highlight .value.profit {
+    color: #56d364;
+}
+
+footer {
+    text-align: center;
+    color: #8b949e;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+footer strong {
+    color: #f85149;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .calculator {
+        padding: 25px;
+        border-radius: 15px;
+    }
+    
+    .result-card {
+        padding: 20px;
+    }
+    
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .result-item.highlight {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .calculator {
+        padding: 20px;
+    }
+    
+    .input-group input {
+        padding: 12px;
+    }
+    
+    #calculateBtn {
+        padding: 15px;
+    }
+}

@@ -1,6 +1,6 @@
-# Crypto Trading Risk Calculator
+# Trading Risk Calculator
 
-A simple web application to help crypto traders calculate the correct position size based on risk management principles.
+A simple web application to help traders calculate the correct position size based on risk management principles.
 
 ## Features
 
@@ -55,4 +55,4 @@ A simple web application to help crypto traders calculate the correct position s
 
 ## Disclaimer
 
-This tool is for educational purposes only. Trading cryptocurrencies involves substantial risk of loss. Always do your own research and never invest more than you can afford to lose.
+This tool is for educational purposes only. Trading involves substantial risk of loss. Always do your own research and never invest more than you can afford to lose.
